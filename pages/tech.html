@@ -2,7 +2,7 @@
 <html>
 <head>
   <!-- Add all styles to CSS sheet. Make sure to create a DIV or CLASS for unique elements -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   <title>Insert Title</title>
   <meta charset="utf-8">
 </head>
@@ -15,13 +15,13 @@
   <nav> <!--Navigation Bar-->
 		<ul>
       <li><a href="../index.html">Home</a></li>
-      <li><a href="pages/ideal.html">Ideal Jobs</a></li>
-      <li><a href="pages/industry.html">Industry Data</a></li>
-      <li><a href="pages/tech.html">IT Technologies</a></li>
-      <li><a href="pages/work.html">IT Work</a></li>
-      <li><a href="pages/project.html">Project Idea</a></li>
-      <li><a href="pages/profile.html">Team Profiles</a></li>
-      <li><a href="pages/tools.html">Tools</a></li>
+      <li><a href="ideal.html">Ideal Jobs</a></li>
+      <li><a href="industry.html">Industry Data</a></li>
+      <li><a href="tech.html">IT Technologies</a></li>
+      <li><a href="work.html">IT Work</a></li>
+      <li><a href="project.html">Project Idea</a></li>
+      <li><a href="profile.html">Team Profiles</a></li>
+      <li><a href="tools.html">Tools</a></li>
 		</ul>
 	</nav>
 
@@ -32,5 +32,23 @@
   <footer>
     <!-- Information that remains at the bottom of the page -->
   </footer>
+
+  <!--Script for adding collapsible sections-->
+  <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 </body>
 </html>
