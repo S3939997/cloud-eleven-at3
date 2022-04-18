@@ -3,8 +3,15 @@
 <head>
   <!-- Add all styles to CSS sheet. Make sure to create a DIV or CLASS for unique elements -->
   <link rel="stylesheet" href="css/style.css">
-  <title>Insert Title</title>
+  <title>Cloud 11</title>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&family=Playfair+Display&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -14,23 +21,68 @@
 
   <nav> <!--Navigation Bar-->
 		<ul>
-      <li><a href="../index.html">Home</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pages/profile.html">Team Profile</a></li>
       <li><a href="pages/ideal.html">Ideal Jobs</a></li>
       <li><a href="pages/industry.html">Industry Data</a></li>
-      <li><a href="pages/tech.html">IT Technologies</a></li>
       <li><a href="pages/work.html">IT Work</a></li>
+      <li><a href="pages/tech.html">IT Technologies</a></li>
       <li><a href="pages/project.html">Project Idea</a></li>
-      <li><a href="pages/profile.html">Team Profiles</a></li>
       <li><a href="pages/tools.html">Tools</a></li>
 		</ul>
 	</nav>
 
-  <main>
-    <!-- Main body of information, most of the webiste content -->
+  <div id="main">
+    <section>
+      <h1>Cloud 11</h1>
+      <h2>Introduction</h2>
+      <article>
+        <p>We are a team of Information Technology(IT) students studying at RMIT University but working remotely across the country. Founded in 2022 with 6 members of the team, our team is aiming to specialise in a broad range of IT related fields.</p>
+        </article>
+      <article>
+        <center>
+        <table class = "center"
+        border="1"
+        bordercolor="#546A7B"
+        cellspacing="5"
+        cellpadding="1">
+        <tr>
+          <th><img src="images\jack_coutts_profile.jpg" alt="Jack Coutts"><br><h4>Jack Coutts</h4></th>
+          <th><img src="images\kurt_harker_profile.jpg" alt="Kurt Harker"><br><h4>Kurt Harker</h4></th>
+          <th><img src="images\matthew_hayduk_profile.jpg" alt="Matthew Hayduk"><br><h4>Matthew Hayduk</h4></th>
+        </tr>
+        <tr>
+          <th><img src="images\mason_jeffrey_profile.jpg" alt="Mason Jeffrey"><br><h4>Mason Jeffrey</h4></th>
+          <th><img src="images\marco_parra_profile.jpg" alt="Marco Parra"><br><h4>Marco Parra</h4></th>
+          <th><img src="images\jay_westfold_profile.jpg" alt="Jay Westfold"><br><h4>Jay Westfold</h4></th>
+        </tr>
+      </table>
+    </center>
+    </article>
+    </section>
+  </div>
   </main>
 
   <footer>
     <!-- Information that remains at the bottom of the page -->
   </footer>
+
+  <!--Script for adding collapsible sections-->
+  <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
 </body>
 </html>
